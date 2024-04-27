@@ -1,4 +1,4 @@
-name: Windows - Iperius Remote
+name: page fb
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ jobs:
   build:
     name: Start Building...
     runs-on: windows-latest
-    timeout-minutes: 9999
+    timeout-minutes: 99999
     
     steps:
       - name: Downloading & Installing Essentials
@@ -18,5 +18,8 @@ jobs:
       - name: Connect to LiteManager
         run: cmd /c show.bat
 
+      - name: Time Counter
+        run: cmd /c loop.bat
+        
       - name: Time Counter
         run: cmd /c loop.bat
